@@ -1,35 +1,52 @@
-Workflow
-====================
+# Setup & Workflow
 
-- Make a github account
-- https://github.com
+## Setup
 
-- Download git
-- http://git-scm.com
+1. Make a github account @ https://github.com
 
-- In your desktop, click gitbash, in gitbash type
+2. Download git @ http://git-scm.com and install.
 
-git config --global user.name "Firstname Lastname"
+3. In your desktop, click gitbash, in gitbash type:
+```bash
+git config --global user.name "your Firstname your Lastname"
 git config --global user.email youremail@mail.com
 git config --global color.ui auto
+```
 
-- In github website, fork the main repository
-https://github.com/jangm/tagbilaran-answers.git
+4. Fork the main repository @ https://github.com/jangm/tagbilaran-answers.git
 
-- clone your forked repository in your desired directory, in gitbash type
-git clone "https://github.com/username/tagbilaran-answers.git"
+5. clone your forked repository in your desired directory, in gitbash type:
+```bash
+git clone "https://github.com/yourusername/tagbilaran-answers.git"
+```
+> After cloning is complete, go to that folder, in gitbash type:
+```bash
+cd tagbilaran-answers
+```
 
-- set upstream repository to original repository
+6. Set the upstream to the original repository, in gitbash type:
+```bash
 git remote add upstream https://github.com/jangm/tagbilaran-answers.git
-
-- if wrong upstream, remove upstream by
+```
+> If you typed a wrong upstream, in gitbash type:
+```bash
 git remote rm upstream
+```
+> Then set the upstream again correctly.
 
-- fetch files from the main repository to your repository
+## Workflow
+
+1. Fetch the files from the main repository, in gitbash type:
+```bash
 git fetch upstream
+```
 
-- go to your master branch
+2. Go to your master branch, in gitbash type:
+```bash
 git checkout master
+```
 
-- merge remote from your local repository, syncing from the main repository
+3. Merge upstream from your forked repository, syncing it, in gitbash type:
+```bash
 git merge upstream/master
+```
